@@ -1,7 +1,6 @@
-# 🏃‍♂️ AthleteX : Athlete Tracker & Coach
+# 🏃‍♂️ [AthleteX](https://athletex-app.onrender.com/) : Athlete Tracker & Coach
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/Mubashirr101/f036a8c9e2e66f677bc2765ebe96241f/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
-<a href="https://athletex-app.onrender.com">Demo</a>
 
 
 <div align="center">
@@ -9,8 +8,12 @@
 </div>
 <br><br>
 A comprehensive fitness analytics platform that aggregates health data from multiple sources, processes it with machine learning, and delivers personalized insights through an interactive web dashboard and AI coaching assistant. 
+<br><br>
 
-<a href="https://athletex-app.onrender.com">Check it out ▶️</a>
+Deployed at https://athletex-app.onrender.com/
+
+
+> It may take a moment to load up the app for the first time. 
 
 ---
 
