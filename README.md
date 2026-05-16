@@ -17,16 +17,6 @@ Deployed at https://athletex.mubashirshaikh.com
 
 ---
 
-### 🔗 DataFlow
-
-<div >
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="img/LifeCycle_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="img/LifeCycle_light.png">
-    <img alt="LifeCycle Diagram" src="img/LifeCycle_light.png" width="600" >
-  </picture>
-</div>
-
 ## 🌟 Overview
 
 Athlete Tracker & Coach is a full-stack fitness analytics platform that:
@@ -62,13 +52,97 @@ Athlete Tracker & Coach is a full-stack fitness analytics platform that:
 - **Personalized Insights**: Data-driven workout suggestions
 - **Goal Tracking**: Progress monitoring and achievement analysis
 
+
+## Screenshots
+
+### Home page
+<div align="center">
+  <img alt="HomePage" src="img/screenshots/home_page.png">
+</div>
+
+### DashBoard
+#### Stress 
+<div align="center">
+  <img alt="Stress_daily" src="img/screenshots/stress_daily.png">
+</div>
+<div align="center">
+  <img alt="stress_hourly" src="img/screenshots/stress_hourly.png">
+</div>
+
+#### HeartRate 
+<div align="center">
+  <img alt="hr_daily" src="img/screenshots/hr_daily.png">
+</div>
+<div align="center">
+  <img alt="hr_hourly" src="img/screenshots/hr_hourly.png">
+</div>
+
+#### Blood Oxygen (SpO2) 
+<div align="center">
+  <img alt="spo2_daily" src="img/screenshots/spo2_daily.png">
+</div>
+
+
+#### Steps 
+<div align="center">
+  <img alt="steps_daily" src="img/screenshots/steps_daily.png">
+</div>
+<div align="center">
+  <img alt="steps_details" src="img/screenshots/steps_details.png">
+</div>
+
+#### Calories 
+<div align="center">
+  <img alt="calories" src="img/screenshots/calories.png">
+</div>
+
+### Activity
+#### Indoor Activities 
+<div align="center">
+  <img alt="indoor_activities_1" src="img/screenshots/indoor_activities_1.png">
+</div>
+<div align="center">
+  <img alt="indoor_activities_2" src="img/screenshots/indoor_activities_2.png">
+</div>
+<div align="center">
+  <img alt="indoor_activities_3" src="img/screenshots/indoor_activities_3.png">
+</div>
+
+#### Outdoor Activities 
+<div align="center">
+  <img alt="outdoor_activities" src="img/screenshots/outdoor_activities.png">
+</div>
+
+### AI Coach
+<div align="center">
+  <img alt="ai_coach" src="img/screenshots/ai_coach.png">
+</div>
+
+
+
+## 📈 Usage
+
+### Dashboard Navigation
+1. **Home**: Overview of daily metrics and goal completion
+2. **Dashboard**: Detailed health metric visualizations with date filtering
+3. **Activity**: Workout routine dashboard and GPS activity tracking with route visualization
+4. **Coach**: AI-powered fitness recommendations
+5. **More**: Additional settings and features
+
+### Data Filtering
+- Use date pickers to focus on specific time periods
+- Time selectors for hourly binning data
+- Interactive charts with hover tooltips
+- Map controls for activity route inspection
+
+
+
 ## 🛠️ Tech Stack
 
 ### Backend & Data Processing
-- **Python 3.8+** - Core programming language
+- **Python 3.8+** - Core programming language and also used for ETL pipeline orchestration
 - **Pandas** - Data manipulation and analysis
 - **SQLAlchemy** - Database ORM and connection management
-- **Apache Airflow** - ETL pipeline orchestration
 - **Supabase** - PostgreSQL database with real-time capabilities
 
 ### Frontend & Visualization
@@ -87,65 +161,6 @@ Athlete Tracker & Coach is a full-stack fitness analytics platform that:
 - **LLM APIs** - AI coaching and insights
 - **File Parsing Libraries**: `fitparse`, `gpxpy`, XML parsing
 
-## 📦 Installation
-
-### Prerequisites
-- Python 3.8 or higher
-- Supabase account and project
-- S3-compatible storage (for JSON files)
-
-### Setup Instructions
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/your-username/athlete-tracker-coach.git
-cd athlete-tracker-coach
-```
-
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Environment Configuration**
-Create a `.env` file with your credentials:
-```env
-# Database Configuration
-url=your_supabase_url
-key=your_supabase_key
-user=your_db_user
-password=your_db_password
-host=your_db_host
-port=5432
-dbname=your_db_name
-
-# Storage Configuration
-json_bucket=your_json_bucket_name
-healthsync_bucket=your_activity_files_bucket
-```
-
-4. **Database Setup**
-The application will automatically create necessary tables on first run using the defined SQLAlchemy models.
-
-5. **Run the Application**
-```bash
-streamlit run app.py
-```
-
-## 🔧 Configuration
-
-### Data Sources
-Configure your data sources in `METRICS_CONFIG` (app.py):
-```python
-METRICS_CONFIG = {
-    "stress": {
-        "table": "stress",
-        "columns": ["start_time", "score", "min", "max", "time_offset", "binning_data"],
-        "jsonPath_template": "com.samsung.shealth.stress/{0}/{1}",
-    },
-    # ... other metrics
-}
-```
 
 ### Supported File Formats
 - **FIT**: Garmin device recordings
@@ -153,20 +168,7 @@ METRICS_CONFIG = {
 - **KML**: Keyhole Markup Language
 - **TCX**: Training Center XML
 
-## 📈 Usage
 
-### Dashboard Navigation
-1. **Home**: Overview of daily metrics and goal completion
-2. **Dashboard**: Detailed health metric visualizations with date filtering
-3. **Activity**: Workout routine dashboard and GPS activity tracking with route visualization
-4. **Coach**: AI-powered fitness recommendations
-5. **More**: Additional settings and features
-
-### Data Filtering
-- Use date pickers to focus on specific time periods
-- Time selectors for hourly binning data
-- Interactive charts with hover tooltips
-- Map controls for activity route inspection
 
 
 
